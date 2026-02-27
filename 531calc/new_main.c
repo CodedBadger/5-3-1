@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 
-//int block_builder(){}
 
-int input_getter(){
+int block_builder(int max_squat, int max_deadlift, int max_bench){
+ printf("Max Squat: %d\n Max Deadlift: %d\n Max Bench %d\n", max_squat, max_bench, max_deadlift);
+}
+
+int main(){
+
   int max_squat, max_bench, max_deadlift, max_strict_press, num_blocks, weight_incs;
   printf("Please enter your max squat\n");
   scanf("%d", &max_squat);
@@ -17,14 +21,6 @@ int input_getter(){
   scanf("%d", &num_blocks);
   //probably weight increse
   //training style, DUP, Standard etc
-
-}
-
-int block_builder(){
- printf("Max Squat: %d\n Max Deadlift: %d\n Max Bench %d\n", max_squat, max_bench, max_deadlift);
-}
-
-int main(){
-  input_getter();
-  block_builder(&max_squat, &max_bench, &max_deadlift);
+  block_builder(max_squat, max_bench, max_deadlift);
+  
 }
